@@ -2,13 +2,14 @@
 require('connect.php');
 
 $response = array();
+
 if(!empty($_POST['Username']) && !empty($_POST['Password']) ){
 $username =$_POST['Username'];
 $password =$_POST['Password']; 
 $pwd=md5($password);
 
 	$result = mysqli_query($con,"SELECT * FROM c_utilisateur WHERE UserName='$username' AND Password='$pwd'") or die(mysql_error());
-	 if(mysqli_num_rows($result) > 0){
+     if(mysqli_num_rows($result) > 0){
 		$response["success"] = 1;
 		$response["user"] = array();
 		while ($row = mysqli_fetch_array($result)) {

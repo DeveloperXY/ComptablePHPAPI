@@ -11,9 +11,8 @@ if(!empty($_POST['Nom']) && !empty($_POST['Prenom']) && !empty($_POST['Type']) &
 	$password=$_POST['Password'];
 	$ids=$_POST['Societe'];
 
-	  $sql = "insert into utilisateur (`Nom`, `Prenom`, `Type`, `DateCreation`, `DateExpiration`, `UserName`, `Password`, `Société_ID`) values ('$nom','$prenom','$type',now(),'','$username',MD5('".$password."'),'$ids')";
+	  $sql = "insert into c_utilisateur (`Nom`, `Prenom`, `Type`, `DateCreation`, `DateExpiration`, `UserName`, `Password`, `Société_ID`) values ('$nom','$prenom','$type',now(),'','$username',MD5('".$password."'),'$ids')";
 	  if(mysqli_query($con,$sql)){
-			
 			$response["success"] = 1;
 	  }
 	  else{
