@@ -21,7 +21,7 @@ if (!empty($_POST['Username']) && !empty($_POST['Password'])) {
             $Facts["type"] = $row[3];
             $Facts["dateCreation"] = $row[4];
             $Facts["dateExpiration"] = $row[5];
-            $Facts["Usename"] = $row[6];
+            $Facts["Username"] = $row[6];
             $Facts["Password"] = $row[7];
             $Facts["SocieteID"] = $row[8];
 
