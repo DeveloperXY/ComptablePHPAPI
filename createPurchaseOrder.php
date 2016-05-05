@@ -14,12 +14,12 @@ if (isset($_POST['data'])) {
         $total += (floatval($product->priceTTC));
     }
 
-    $sql = "INSERT INTO c_commandevente VALUES (NULL, NOW(), 0, '', $total)";
+    $sql = "INSERT INTO c_commandeachat VALUES (NULL, NOW(), 0, '', $total)";
     if (mysqli_query($con, $sql)) {
         $order_id = $con->insert_id;
 
-        $facture_id = "FA" .$order_id ."SA";
-        $sql = "UPDATE c_commandevente SET IDFacture = '$facture_id' WHERE ID = $order_id";
+        $facture_id = "FA" .$order_id ."PU";
+        $sql = "UPDATE c_commandeachat SET IDFacture = '$facture_id' WHERE ID = $order_id";
         if (mysqli_query($con, $sql)) {
             $response["success"] = 1;
 
@@ -28,14 +28,16 @@ if (isset($_POST['data'])) {
                 $product_quantity = $product->quantity;
                 $product_ht = 0;
                 $product_ttc = $product->priceTTC;
+                $product_supplier = $product->supplier;
                 $total = 0;
 
-                $sql = "INSERT INTO c_produit_has_commandevente VALUES ($product_id, $order_id, $product_quantity, $product_ht, $product_ttc, $total)";
+                $sql = "INSERT INTO c_produit_has_commandeachat VALUES ($product_id, $order_id, $product_supplier, $product_quantity, $product_ht, $product_ttc, $total)";
                 if (mysqli_query($con, $sql)) {
                     // Empty for now
                 }
                 else
-                    $response["success"] = -1; // -1: for debugging, different error code
+                    echo mysqli_error($con);
+//                    $response["success"] = -1; // -1: for debugging, different error code
             }
         }
         else
