@@ -4,9 +4,9 @@ require('connect.php');
 $response = array();
 
 $result = mysqli_query($con, "SELECT * from c_produit ORDER BY ID DESC") or die(mysql_error());
-if (mysqli_num_rows($result) > 0) {
     $response["success"] = 1;
     $response["products"] = array();
+if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_array($result)) {
 
         $Facts = array();
@@ -21,9 +21,7 @@ if (mysqli_num_rows($result) > 0) {
         array_push($response["products"], $Facts);
 
     }
-} else {
-    $response["success"] = 0;
-}
+} 
 
 
 echo json_encode($response);

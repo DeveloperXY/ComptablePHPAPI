@@ -3,7 +3,7 @@ require('connect.php');
 
 $response = array();
 
-$result = mysqli_query($con, "SELECT * from c_commandevente ORDER BY ID DESC") or die(mysql_error());
+$result = mysqli_query($con, "SELECT * from c_commandeachat ORDER BY ID DESC") or die(mysql_error());
 
 $response["success"] = 1;
 $response["orders"] = array();
