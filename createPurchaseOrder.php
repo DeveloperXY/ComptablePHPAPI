@@ -5,7 +5,7 @@ $response = array();
 if (isset($_POST['data'])) {
     $data = $_POST['data'];
     $obj = json_decode($data);
-    $response = [];
+    $response = array();
     $total = 0;
 
     // Calculate the total price of this sale order
