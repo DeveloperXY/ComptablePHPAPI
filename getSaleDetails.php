@@ -6,7 +6,7 @@ $response = array();
 if (!empty($_POST['orderID'])) {
     $order_id = $_POST['orderID'];
 
-    $result = mysqli_query($con, "SELECT * FROM 'c_produit_has_commandevente' WHERE CommandeVente_ID = $order_id") or die(mysql_error());
+    $result = mysqli_query($con, "SELECT * FROM c_produit_has_commandevente WHERE CommandeVente_ID = $order_id") or die(mysql_error());
     $response["success"] = 1;
     $response["sale"] = array();
 

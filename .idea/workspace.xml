@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ea1c55e-400f-4d0a-b382-65053128f92a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getSaleDetails.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getStock.php" afterPath="$PROJECT_DIR$/getStock.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getPurchaseDetails.php" afterPath="$PROJECT_DIR$/getPurchaseDetails.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getSaleDetails.php" afterPath="$PROJECT_DIR$/getSaleDetails.php" />
     </list>
     <ignored path="ComptablePHPAPI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,10 +36,11 @@
       <file leaf-file-name="getPurchaseDetails.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/getPurchaseDetails.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+            <state relative-caret-position="480">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
-                <marker date="1463125077141" expanded="true" signature="187:256" placeholder="SELECT * FRO... " />
+                <marker date="1463126250032" expanded="true" signature="156:223" placeholder="SELECT * FRO... c_produit_has_commandeachat" />
+                <marker date="1463126250032" expanded="true" signature="656:704" placeholder="SELECT Libel... c_produit" />
               </folding>
             </state>
           </provider>
@@ -48,10 +49,10 @@
       <file leaf-file-name="getSaleDetails.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/getSaleDetails.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+            <state relative-caret-position="264">
+              <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
               <folding>
-                <marker date="1463125097431" expanded="true" signature="156:225" placeholder="SELECT * FRO... " />
+                <marker date="1463125200405" expanded="true" signature="156:223" placeholder="SELECT * FRO... c_produit_has_commandevente" />
               </folding>
             </state>
           </provider>
@@ -82,8 +83,8 @@
         <option value="$PROJECT_DIR$/activateApp.php" />
         <option value="$PROJECT_DIR$/getActivationStatus.php" />
         <option value="$PROJECT_DIR$/getStock.php" />
-        <option value="$PROJECT_DIR$/getPurchaseDetails.php" />
         <option value="$PROJECT_DIR$/getSaleDetails.php" />
+        <option value="$PROJECT_DIR$/getPurchaseDetails.php" />
       </list>
     </option>
   </component>
@@ -216,7 +217,7 @@
       <workItem from="1462444420939" duration="2217000" />
       <workItem from="1462894174824" duration="5360000" />
       <workItem from="1462964605083" duration="2912000" />
-      <workItem from="1463123170535" duration="1938000" />
+      <workItem from="1463123170535" duration="3088000" />
     </task>
     <task id="LOCAL-00001" summary="Code refactor">
       <created>1462448174993</created>
@@ -253,11 +254,18 @@
       <option name="project" value="LOCAL" />
       <updated>1463125125375</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add getSaleDetails.php">
+      <created>1463125143305</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1463125143305</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19267000" />
+    <option name="totallyTimeSpent" value="20417000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -301,7 +309,8 @@
     <MESSAGE value="Add getActivationStatus.php" />
     <MESSAGE value="getActivationStatus.php: check if a serial is activated." />
     <MESSAGE value="Add getPurchaseDetails.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add getPurchaseDetails.php" />
+    <MESSAGE value="Add getSaleDetails.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add getSaleDetails.php" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -735,20 +744,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/getSaleDetails.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+        <state relative-caret-position="264">
+          <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
           <folding>
-            <marker date="1463125097431" expanded="true" signature="156:225" placeholder="SELECT * FRO... " />
+            <marker date="1463125200405" expanded="true" signature="156:223" placeholder="SELECT * FRO... c_produit_has_commandevente" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/getPurchaseDetails.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+        <state relative-caret-position="480">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
-            <marker date="1463125077141" expanded="true" signature="187:256" placeholder="SELECT * FRO... " />
+            <marker date="1463126250032" expanded="true" signature="156:223" placeholder="SELECT * FRO... c_produit_has_commandeachat" />
+            <marker date="1463126250032" expanded="true" signature="656:704" placeholder="SELECT Libel... c_produit" />
           </folding>
         </state>
       </provider>
