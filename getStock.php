@@ -3,7 +3,7 @@ require('connect.php');
 
 $response = array();
 
-$result = mysqli_query($con, "SELECT * from c_produit ORDER BY ID DESC") or die(mysql_error());
+$result = mysqli_query($con, "SELECT * from c_produit ORDER BY libelle") or die(mysql_error());
     $response["success"] = 1;
     $response["products"] = array();
 if (mysqli_num_rows($result) > 0) {
