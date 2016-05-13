@@ -15,10 +15,20 @@ if (!empty($_POST['orderID'])) {
 
         while ($row = mysqli_fetch_array($result)) {
             $Facts = array();
-            $Facts["productID"] = $row[0];
+            $product_id = $row[0];
+            $Facts["productID"] = $product_id;
             $Facts["orderID"] = $row[1];
             $Facts["quantity"] = $row[2];
             $Facts["priceTTC"] = $row[4];
+
+            $res = mysqli_query($con, "SELECT Libelle, Photo FROM c_produit WHERE ID = $product_id") or die(mysql_error());
+            if (mysqli_num_rows($res) > 0) {
+                while ($r = mysqli_fetch_array($res)) {
+
+                    $Facts["productName"] = $r[0];
+                    $Facts["productImage"] = $r[1];
+                }
+            }
 
             array_push($response["sale"], $Facts);
         }
