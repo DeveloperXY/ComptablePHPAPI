@@ -16,7 +16,6 @@ if (!empty($_POST['orderID'])) {
             $Facts = array();
             $product_id = $row[0];
             $Facts["productID"] = $product_id;
-            $Facts["orderID"] = $row[1];
             $Facts["quantity"] = $row[2];
             $Facts["priceTTC"] = $row[4];
 
