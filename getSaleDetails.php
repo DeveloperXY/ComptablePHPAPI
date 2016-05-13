@@ -8,10 +8,9 @@ if (!empty($_POST['orderID'])) {
 
     $result = mysqli_query($con, "SELECT * FROM c_produit_has_commandevente WHERE CommandeVente_ID = $order_id") or die(mysql_error());
     $response["success"] = 1;
-    $response["sale"] = array();
+    $response["orderDetails"] = array();
 
     if (mysqli_num_rows($result) > 0) {
-        $response["sale"] = array();
 
         while ($row = mysqli_fetch_array($result)) {
             $Facts = array();
@@ -30,7 +29,7 @@ if (!empty($_POST['orderID'])) {
                 }
             }
 
-            array_push($response["sale"], $Facts);
+            array_push($response["orderDetails"], $Facts);
         }
     }
 
