@@ -9,7 +9,7 @@ if (!empty($_POST['Description']) && !empty($_POST['Prix']) && !empty($_POST['Lo
     //$date=$_POST['Date'];
     $local = $_POST['Local'];
 
-    $sql = "insert into charge (`Description`, `Prix`, `Date`, `Locale_ID`) values ('$decsription','$prix',now(),'$local')";
+    $sql = "insert into c_charge (`Description`, `Prix`, `Date`, `Locale_ID`) values ('$decsription','$prix',now(),'$local')";
     if (mysqli_query($con, $sql)) {
 
         $response["success"] = 1;
