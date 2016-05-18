@@ -1,7 +1,6 @@
 <?php
 require('connect.php');
 
-$response = array();
 if (isset($_POST['data'])) {
     $data = $_POST['data'];
 
