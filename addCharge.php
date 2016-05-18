@@ -9,13 +9,11 @@ if (!empty($_POST['Description']) && !empty($_POST['Prix']) && !empty($_POST['Lo
     //$date=$_POST['Date'];
     $local = $_POST['Local'];
 
-    $sql = "insert into c_charge (`Description`, `Prix`, `Date`, `Locale_ID`) values ('$decsription','$prix',now(),'$local')";
-    if (mysqli_query($con, $sql)) {
-
+    $sql = "insert into c_charge (`Description`, `Prix`, `Date`, `Locale_ID`) values ('$description','$prix',now(),'$local')";
+    if (mysqli_query($con, $sql))
         $response["success"] = 1;
-    } else {
+    else
         $response["success"] = 0;
-    }
 
 } else {
     $response["erreur"] = "tous les champs sont obligatoire !";
