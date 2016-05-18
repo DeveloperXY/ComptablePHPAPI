@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="3ea1c55e-400f-4d0a-b382-65053128f92a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/activateApp.php" afterPath="$PROJECT_DIR$/activateApp.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addCharge.php" afterPath="$PROJECT_DIR$/addCharge.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connect.php" afterPath="$PROJECT_DIR$/connect.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/createPurchaseOrder.php" afterPath="$PROJECT_DIR$/createPurchaseOrder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/createSaleOrder.php" afterPath="$PROJECT_DIR$/createSaleOrder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getPurchaseDetails.php" afterPath="$PROJECT_DIR$/getPurchaseDetails.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getSaleDetails.php" afterPath="$PROJECT_DIR$/getSaleDetails.php" />
     </list>
     <ignored path="ComptablePHPAPI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,15 +59,55 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="createPurchaseOrder.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="createPurchaseOrder.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/createPurchaseOrder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="24" />
+              <folding>
+                <marker date="1463573703816" expanded="true" signature="490:553" placeholder="INSERT INTO c_commandeachat... " />
+                <marker date="1463573703816" expanded="true" signature="693:757" placeholder="UPDATE c_com... " />
+                <marker date="1463573703816" expanded="true" signature="1198:1348" placeholder="INSERT INTO c_produit_has_commandeachat... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createSaleOrder.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/createSaleOrder.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="92">
               <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
               <folding>
-                <marker date="1463564887294" expanded="true" signature="490:553" placeholder="INSERT INTO c_commandeachat... " />
-                <marker date="1463564887294" expanded="true" signature="693:757" placeholder="UPDATE c_com... " />
-                <marker date="1463564887294" expanded="true" signature="1198:1342" placeholder="INSERT INTO c_produit_has_commandeachat... " />
+                <marker date="1463573928111" expanded="true" signature="481:544" placeholder="INSERT INTO c_commandevente... " />
+                <marker date="1463573928111" expanded="true" signature="682:746" placeholder="UPDATE c_com... " />
+                <marker date="1463573928111" expanded="true" signature="1122:1253" placeholder="INSERT INTO c_produit_has_commandevente... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getPurchaseDetails.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/getPurchaseDetails.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="65" />
+              <folding>
+                <marker date="1463573117062" expanded="true" signature="156:246" placeholder="SELECT Produ... c_produit_has_commandeachat" />
+                <marker date="1463573117062" expanded="true" signature="683:731" placeholder="SELECT Libel... c_produit" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getSaleDetails.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/getSaleDetails.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="577">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding>
+                <marker date="1463573193872" expanded="true" signature="156:246" placeholder="SELECT Produ... c_produit_has_commandevente" />
+                <marker date="1463573193872" expanded="true" signature="683:731" placeholder="SELECT Libel... c_produit" />
               </folding>
             </state>
           </provider>
@@ -111,7 +151,6 @@
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/addCharge.php" />
         <option value="$PROJECT_DIR$/addSaleOrder.php" />
-        <option value="$PROJECT_DIR$/createSaleOrder.php" />
         <option value="$PROJECT_DIR$/getSaleOrder.php" />
         <option value="$PROJECT_DIR$/connect.php" />
         <option value="$PROJECT_DIR$/addClient.php" />
@@ -123,11 +162,12 @@
         <option value="$PROJECT_DIR$/activateApp.php" />
         <option value="$PROJECT_DIR$/getActivationStatus.php" />
         <option value="$PROJECT_DIR$/getStock.php" />
-        <option value="$PROJECT_DIR$/getPurchaseDetails.php" />
-        <option value="$PROJECT_DIR$/getSaleDetails.php" />
         <option value="$PROJECT_DIR$/chargePurchaseOrder.php" />
         <option value="$PROJECT_DIR$/chargeSaleOrder.php" />
+        <option value="$PROJECT_DIR$/getPurchaseDetails.php" />
+        <option value="$PROJECT_DIR$/getSaleDetails.php" />
         <option value="$PROJECT_DIR$/createPurchaseOrder.php" />
+        <option value="$PROJECT_DIR$/createSaleOrder.php" />
       </list>
     </option>
   </component>
@@ -142,10 +182,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="1358" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="1456" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -263,7 +303,7 @@
       <workItem from="1462964605083" duration="2912000" />
       <workItem from="1463123170535" duration="5341000" />
       <workItem from="1463155557697" duration="2072000" />
-      <workItem from="1463563403037" duration="1498000" />
+      <workItem from="1463563403037" duration="3207000" />
     </task>
     <task id="LOCAL-00001" summary="Code refactor">
       <created>1462448174993</created>
@@ -342,17 +382,24 @@
       <option name="project" value="LOCAL" />
       <updated>1463156297374</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Fix a bug causing problems with creating new orders.">
+      <created>1463565003903</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1463565003903</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26240000" />
+    <option name="totallyTimeSpent" value="27949000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="1358" y="-8" width="1456" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16105418" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15277778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1749634" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -395,7 +442,8 @@
     <MESSAGE value="Code refactor" />
     <MESSAGE value="Add chargePurchaseOrder.php" />
     <MESSAGE value="Add chargeSaleOrder.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add chargeSaleOrder.php" />
+    <MESSAGE value="Fix a bug causing problems with creating new orders." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix a bug causing problems with creating new orders." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -416,6 +464,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="696">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <marker date="1463573117062" expanded="true" signature="156:246" placeholder="SELECT Produ... c_produit_has_commandeachat" />
+            <marker date="1463573117062" expanded="true" signature="683:731" placeholder="SELECT Libel... c_produit" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -423,6 +475,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1463573193872" expanded="true" signature="156:246" placeholder="SELECT Produ... c_produit_has_commandevente" />
+            <marker date="1463573193872" expanded="true" signature="683:731" placeholder="SELECT Libel... c_produit" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -473,9 +529,9 @@
         <state relative-caret-position="96">
           <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
           <folding>
-            <marker date="1463564887294" expanded="true" signature="490:553" placeholder="INSERT INTO c_commandeachat... " />
-            <marker date="1463564887294" expanded="true" signature="693:757" placeholder="UPDATE c_com... " />
-            <marker date="1463564887294" expanded="true" signature="1198:1342" placeholder="INSERT INTO c_produit_has_commandeachat... " />
+            <marker date="1463573703816" expanded="true" signature="490:553" placeholder="INSERT INTO c_commandeachat... " />
+            <marker date="1463573703816" expanded="true" signature="693:757" placeholder="UPDATE c_com... " />
+            <marker date="1463573703816" expanded="true" signature="1198:1348" placeholder="INSERT INTO c_produit_has_commandeachat... " />
           </folding>
         </state>
       </provider>
@@ -531,6 +587,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -545,6 +602,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1463573928111" expanded="true" signature="481:544" placeholder="INSERT INTO c_commandevente... " />
+            <marker date="1463573928111" expanded="true" signature="682:746" placeholder="UPDATE c_com... " />
+            <marker date="1463573928111" expanded="true" signature="1122:1253" placeholder="INSERT INTO c_produit_has_commandevente... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -559,6 +621,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -603,13 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/createSaleOrder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/getSaleOrder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -636,6 +692,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="4" column="65" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -710,20 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/getSaleDetails.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getPurchaseDetails.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/editFournisseur.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -766,14 +809,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/getPurchaseDetails.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="65" />
+          <folding>
+            <marker date="1463573117062" expanded="true" signature="156:246" placeholder="SELECT Produ... c_produit_has_commandeachat" />
+            <marker date="1463573117062" expanded="true" signature="683:731" placeholder="SELECT Libel... c_produit" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getSaleDetails.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <marker date="1463573193872" expanded="true" signature="156:246" placeholder="SELECT Produ... c_produit_has_commandevente" />
+            <marker date="1463573193872" expanded="true" signature="683:731" placeholder="SELECT Libel... c_produit" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/createPurchaseOrder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="24" />
+          <folding>
+            <marker date="1463573703816" expanded="true" signature="490:553" placeholder="INSERT INTO c_commandeachat... " />
+            <marker date="1463573703816" expanded="true" signature="693:757" placeholder="UPDATE c_com... " />
+            <marker date="1463573703816" expanded="true" signature="1198:1348" placeholder="INSERT INTO c_produit_has_commandeachat... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/createSaleOrder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
           <folding>
-            <marker date="1463564887294" expanded="true" signature="490:553" placeholder="INSERT INTO c_commandeachat... " />
-            <marker date="1463564887294" expanded="true" signature="693:757" placeholder="UPDATE c_com... " />
-            <marker date="1463564887294" expanded="true" signature="1198:1342" placeholder="INSERT INTO c_produit_has_commandeachat... " />
+            <marker date="1463573928111" expanded="true" signature="481:544" placeholder="INSERT INTO c_commandevente... " />
+            <marker date="1463573928111" expanded="true" signature="682:746" placeholder="UPDATE c_com... " />
+            <marker date="1463573928111" expanded="true" signature="1122:1253" placeholder="INSERT INTO c_produit_has_commandevente... " />
           </folding>
         </state>
       </provider>

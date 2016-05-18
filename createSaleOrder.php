@@ -4,8 +4,11 @@ require('connect.php');
 $response = array();
 if (isset($_POST['data'])) {
     $data = $_POST['data'];
-    $obj = json_decode($data);
-    $response = [];
+
+    // Remove all trailing backslashes
+    $obj = json_decode(str_replace("\\", "", $data));
+
+    $response = array();
     $total = 0;
 
     // Calculate the total price of this sale order
@@ -30,7 +33,7 @@ if (isset($_POST['data'])) {
                 $product_ttc = $product->priceTTC;
                 $total = 0;
 
-                $sql = "INSERT INTO c_produit_has_commandevente VALUES ($product_id, $order_id, $product_quantity, $product_ht, $product_ttc, $total)";
+                $sql = "INSERT INTO c_produit_has_commandevente VALUES (NULL, $product_id, $order_id, $product_quantity, $product_ht, $product_ttc, $total)";
                 if (mysqli_query($con, $sql)) {
                     // Empty for now
                 }

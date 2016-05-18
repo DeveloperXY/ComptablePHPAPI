@@ -6,7 +6,7 @@ $response = array();
 if (!empty($_POST['orderID'])) {
     $order_id = $_POST['orderID'];
 
-    $result = mysqli_query($con, "SELECT * FROM c_produit_has_commandevente WHERE CommandeVente_ID = $order_id") or die(mysql_error());
+    $result = mysqli_query($con, "SELECT Produit_ID, Qte, PrixTTC FROM c_produit_has_commandevente WHERE CommandeVente_ID = $order_id") or die(mysql_error());
     $response["success"] = 1;
     $response["orderDetails"] = array();
 
@@ -16,8 +16,8 @@ if (!empty($_POST['orderID'])) {
             $Facts = array();
             $product_id = $row[0];
             $Facts["productID"] = $product_id;
-            $Facts["quantity"] = $row[2];
-            $Facts["priceTTC"] = $row[4];
+            $Facts["quantity"] = $row[1];
+            $Facts["priceTTC"] = $row[2];
 
             $res = mysqli_query($con, "SELECT Libelle, Photo FROM c_produit WHERE ID = $product_id") or die(mysql_error());
             if (mysqli_num_rows($res) > 0) {

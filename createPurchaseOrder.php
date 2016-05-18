@@ -32,18 +32,21 @@ if (isset($_POST['data'])) {
                 $product_ttc = $obj[$i]->priceTTC;
                 $product_supplier = $obj[$i]->supplier;
                 $total = 0;
-                $sql = "INSERT INTO c_produit_has_commandeachat VALUES ($product_id, $order_id, $product_supplier, $product_quantity, $product_ht, $product_ttc, $total)";
+                $sql = "INSERT INTO c_produit_has_commandeachat VALUES (NULL, $product_id, $order_id, $product_supplier, $product_quantity, $product_ht, $product_ttc, $total)";
                 if (mysqli_query($con, $sql)) {
                     // Empty for now
-                } else
+                } else {
                     echo mysqli_error($con);
 //                    $response["success"] = -1; // -1: for debugging, different error code
+                }
             }
-        } else
+        } else {
 //            $response["success"] = -2; // -2: for debugging, different error code
             echo mysqli_error($con);
-    } else
+        }
+    } else {
         $response["success"] = 0;
+    }
 
     echo json_encode($response);
 }
