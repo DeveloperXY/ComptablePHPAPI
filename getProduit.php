@@ -3,8 +3,8 @@ require('connect.php');
 
 $response = array();
 
-if (isset($_POST["localeID"])) {
-    $id = $_POST["localeID"];
+if (isset($_GET["localeID"])) {
+    $id = $_GET["localeID"];
     $result = mysqli_query($con, "SELECT * from c_produit WHERE locale_id = $id ORDER BY ID DESC") or die(mysql_error());
     $response["success"] = 1;
     $response["produit"] = array();
