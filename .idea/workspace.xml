@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ea1c55e-400f-4d0a-b382-65053128f92a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getFournisseur.php" afterPath="$PROJECT_DIR$/getFournisseur.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getClient.php" afterPath="$PROJECT_DIR$/getClient.php" />
     </list>
     <ignored path="ComptablePHPAPI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getFournisseur.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="getFournisseur.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/getFournisseur.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="115">
+              <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
               <folding>
                 <marker date="1464372883201" expanded="true" signature="152:168" placeholder="SELECT * fro... c_charge" />
                 <marker date="1464372883201" expanded="true" signature="152:218" placeholder="SELECT * fro... c_fournisseur" />
@@ -85,25 +84,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getChargeByLocaleID.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/getChargeByLocaleID.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="23" selection-end-column="29" />
-              <folding>
-                <marker date="1463917315356" expanded="true" signature="157:227" placeholder="SELECT * fro... charge" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getClient.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="getClient.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/getClient.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+            <state relative-caret-position="23">
+              <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
               <folding>
-                <marker date="1463563918459" expanded="true" signature="83:122" placeholder="SELECT * fro... c_client" />
+                <marker date="1464373538653" expanded="true" signature="152:168" placeholder="SELECT * fro... c_fournisseur" />
+                <marker date="1464373538653" expanded="true" signature="152:213" placeholder="SELECT * fro... c_client" />
               </folding>
             </state>
           </provider>
@@ -126,7 +114,6 @@
         <option value="$PROJECT_DIR$/addLocal.php" />
         <option value="$PROJECT_DIR$/addProduit.php" />
         <option value="$PROJECT_DIR$/editFournisseur.php" />
-        <option value="$PROJECT_DIR$/getClient.php" />
         <option value="$PROJECT_DIR$/activateApp.php" />
         <option value="$PROJECT_DIR$/getActivationStatus.php" />
         <option value="$PROJECT_DIR$/chargePurchaseOrder.php" />
@@ -145,6 +132,7 @@
         <option value="$PROJECT_DIR$/createSaleOrder.php" />
         <option value="$PROJECT_DIR$/createPurchaseOrder.php" />
         <option value="$PROJECT_DIR$/getFournisseur.php" />
+        <option value="$PROJECT_DIR$/getClient.php" />
       </list>
     </option>
   </component>
@@ -289,7 +277,7 @@
       <workItem from="1463912072145" duration="716000" />
       <workItem from="1463917132538" duration="771000" />
       <workItem from="1464017198051" duration="1203000" />
-      <workItem from="1464367543641" duration="3986000" />
+      <workItem from="1464367543641" duration="4811000" />
     </task>
     <task id="LOCAL-00001" summary="Code refactor">
       <created>1462448174993</created>
@@ -442,7 +430,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46664000" />
+    <option name="totallyTimeSpent" value="47489000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -852,16 +840,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/getClient.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-          <folding>
-            <marker date="1463563918459" expanded="true" signature="83:122" placeholder="SELECT * fro... c_client" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/getChargeByLocaleID.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -884,11 +862,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/getFournisseur.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="115">
+          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
           <folding>
             <marker date="1464372883201" expanded="true" signature="152:168" placeholder="SELECT * fro... c_charge" />
             <marker date="1464372883201" expanded="true" signature="152:218" placeholder="SELECT * fro... c_fournisseur" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getClient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+          <folding>
+            <marker date="1464373538653" expanded="true" signature="152:168" placeholder="SELECT * fro... c_fournisseur" />
+            <marker date="1464373538653" expanded="true" signature="152:213" placeholder="SELECT * fro... c_client" />
           </folding>
         </state>
       </provider>
