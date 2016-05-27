@@ -1,8 +1,9 @@
 <?php
 require('connect.php');
 
-if (isset($_POST['data'])) {
+if (isset($_POST['data']) && isset($_POST['localeID'])) {
     $data = $_POST['data'];
+    $id = $_POST['localeID'];
 
     // Remove all trailing backslashes
     $obj = json_decode(str_replace("\\", "", $data));
@@ -16,7 +17,7 @@ if (isset($_POST['data'])) {
         $total += (floatval($product->priceTTC));
     }
 
-    $sql = "INSERT INTO c_commandevente VALUES (NULL, NOW(), 0, '', $total)";
+    $sql = "INSERT INTO c_commandevente VALUES (NULL, NOW(), 0, '', $total, $id)";
     if (mysqli_query($con, $sql)) {
         $order_id = $con->insert_id;
 
