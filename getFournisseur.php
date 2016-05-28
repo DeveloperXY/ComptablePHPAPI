@@ -3,8 +3,8 @@ require('connect.php');
 
 $response = array();
 
-if (isset($_POST["companyID"])) {
-    $id = $_POST["companyID"];
+if (isset($_GET["companyID"])) {
+    $id = $_GET["companyID"];
     $result = mysqli_query($con, "SELECT * from c_fournisseur WHERE idsociete = $id ORDER BY ID DESC") or die(mysql_error());
 
     $response["success"] = 1;
