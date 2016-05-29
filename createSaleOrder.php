@@ -35,15 +35,20 @@ if (isset($_POST['data']) && isset($_POST['localeID'])) {
 
                 $sql = "INSERT INTO c_produit_has_commandevente VALUES (NULL, $product_id, $order_id, $product_quantity, $product_ht, $product_ttc, $total)";
                 if (mysqli_query($con, $sql)) {
-                    // Empty for now
+                    $sql = "UPDATE c_produit SET qte = qte - $product_quantity WHERE ID = $product_id";
+                    if (mysqli_query($con, $sql)) {
+                        // Empty for now
+                    } else {
+                        echo mysqli_error($con);
+                        $response["success"] = -1;
+                    }
                 }
                 else
-                    $response["success"] = -1; // -1: for debugging, different error code
+                    $response["success"] = -2;
             }
         }
         else
-//            $response["success"] = -2; // -2: for debugging, different error code
-            echo mysqli_error($con);
+            $response["success"] = -3;
     }
     else
         $response["success"] = 0;
