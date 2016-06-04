@@ -38,15 +38,15 @@ if (isset($_POST['data']) && isset($_POST['qteData']) && isset($_POST['localeID'
 
     // If there was no problem with the required product quantities
     if ($PRODUCTS_QTE_IS_OK) {
-        $total = 0;
+        $order_total = 0;
 
         // Calculate the total price of this sale order
         foreach ($obj as $product) {
             // priceTTC represents the product's priceTTC multiplied by its quantity
-            $total += (floatval($product->priceTTC));
+            $order_total += (floatval($product->priceTTC));
         }
 
-        $sql = "INSERT INTO c_commandevente VALUES (NULL, NOW(), 0, '', $total, $id)";
+        $sql = "INSERT INTO c_commandevente VALUES (NULL, NOW(), 0, '', $order_total, $id)";
         if (mysqli_query($con, $sql)) {
             $order_id = $con->insert_id;
 
@@ -66,7 +66,12 @@ if (isset($_POST['data']) && isset($_POST['qteData']) && isset($_POST['localeID'
                     if (mysqli_query($con, $sql)) {
                         $sql = "UPDATE c_produit SET qte = qte - $product_quantity WHERE ID = $product_id";
                         if (mysqli_query($con, $sql)) {
-                            // Empty for now
+                            $sql = "INSERT INTO c_payement_client VALUES ($order_id, 0, 'Especes', $order_total, NOW())";
+                            if (mysqli_query($con, $sql)) {
+
+                            }
+                            else
+                                $response["success"] = -5;
                         } else {
                             echo mysqli_error($con);
                             $response["success"] = -1;

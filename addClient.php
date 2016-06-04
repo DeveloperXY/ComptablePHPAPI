@@ -2,13 +2,15 @@
 require('connect.php');
 
 $response = array();
-if (!empty($_POST['NomPrenom']) && !empty($_POST['Tel']) && !empty($_POST['Adresse'])) {
+if (!empty($_POST['companyID']) && !empty($_POST['NomPrenom']) && !empty($_POST['Tel']) && !empty($_POST['Adresse'])) {
 
     $nom = $_POST['NomPrenom'];
     $tel = $_POST['Tel'];
     $adresse = $_POST['Adresse'];
     $email = $_POST['Email'];
-    $sql = "insert into c_client (NomPrenom,Tel,Adresse,Email) values ('$nom','$tel','$adresse','$email')";
+    $companyID = $_POST['companyID'];
+
+    $sql = "insert into c_client (NomPrenom,Tel,Adresse,Email,idsociete) values ('$nom','$tel','$adresse','$email', $companyID)";
     if (mysqli_query($con, $sql)) {
 
         $response["success"] = 1;
