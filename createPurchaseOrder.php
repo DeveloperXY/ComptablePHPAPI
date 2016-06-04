@@ -9,14 +9,14 @@ if (isset($_POST['data']) && isset($_POST['localeID'])) {
     $obj = json_decode(str_replace("\\", "", $data));
 
     $response = array();
-    $total = 0;
+    $order_total = 0;
     // Calculate the total price of this sale order
     for ($i = 0; $i < count($obj); $i++) {
         // priceTTC represents the product's priceTTC multiplied by its quantity
-        $total += (floatval($obj[$i]->priceTTC));
+        $order_total += (floatval($obj[$i]->priceTTC));
     }
 
-    $sql = "INSERT INTO c_commandeachat VALUES (NULL, NOW(), 0, '', $total, $id)";
+    $sql = "INSERT INTO c_commandeachat VALUES (NULL, NOW(), 0, '', $order_total, $id)";
     if (mysqli_query($con, $sql)) {
         $order_id = $con->insert_id;
 
@@ -36,7 +36,12 @@ if (isset($_POST['data']) && isset($_POST['localeID'])) {
                 if (mysqli_query($con, $sql)) {
                     $sql = "UPDATE c_produit SET qte = qte + $product_quantity WHERE ID = $product_id";
                     if (mysqli_query($con, $sql)) {
-                        // Empty for now
+                        $sql = "INSERT INTO c_facture_fournisseur VALUES ($order_id, $product_supplier, 'Especes', $order_total, NOW())";
+                        if (mysqli_query($con, $sql)) {
+
+                        } else {
+                            $response["success"] = -2;
+                        }
                     } else {
                         echo mysqli_error($con);
                         $response["success"] = -1;
