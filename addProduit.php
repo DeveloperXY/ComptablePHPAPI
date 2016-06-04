@@ -12,24 +12,29 @@ if (!empty($_POST['Libelle']) && !empty($_POST['PrixHT']) && !empty($_POST['Prix
     $qte = $_POST['Qte'];
     $local = $_POST['Local'];
 
-
-    define('UPLOAD_DIR', 'produits/');
-    $img = $_POST['Photo'];
-    $img = str_replace('data:image/png;base64,', '', $img);
-    $img = str_replace(' ', '+', $img);
-    $data = base64_decode($img);
-    //$trimmed = trim($libelle);
-    $trimmed = str_replace(' ', '', $libelle);
-    $photo = $trimmed . '_' . rand() . '.png';
-    $file = UPLOAD_DIR . $photo;
-    $success = file_put_contents($file, $data);
-
-    $sql = "insert into c_produit (`Libelle`, `PrixHT`, `PrixTTC`, `CodeBar`, `Photo`, `Qte`, `Locale_ID`) values ('$libelle','$prixHT','$prixTTC','$codeBar','$photo','$qte','$local')";
-    if (mysqli_query($con, $sql)) {
-
-        $response["success"] = 1;
+    $result = mysqli_query($con, "SELECT * from c_produit WHERE CodeBar LIKE '$codeBar'") or die(mysql_error());
+    if (mysqli_num_rows($result) > 0) {
+        $response["success"] = -1;
+        $response["message"] = "A product with the same bar code already exists.";
     } else {
-        $response["success"] = 0;
+        define('UPLOAD_DIR', 'produits/');
+        $img = $_POST['Photo'];
+        $img = str_replace('data:image/png;base64,', '', $img);
+        $img = str_replace(' ', '+', $img);
+        $data = base64_decode($img);
+        //$trimmed = trim($libelle);
+        $trimmed = str_replace(' ', '', $libelle);
+        $photo = $trimmed . '_' . rand() . '.png';
+        $file = UPLOAD_DIR . $photo;
+        $success = file_put_contents($file, $data);
+
+        $sql = "insert into c_produit (`Libelle`, `PrixHT`, `PrixTTC`, `CodeBar`, `Photo`, `Qte`, `Locale_ID`) values ('$libelle','$prixHT','$prixTTC','$codeBar','$photo','$qte','$local')";
+        if (mysqli_query($con, $sql)) {
+
+            $response["success"] = 1;
+        } else {
+            $response["success"] = 0;
+        }
     }
 
 } else {
