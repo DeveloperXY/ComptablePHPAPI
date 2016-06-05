@@ -14,7 +14,7 @@ if (!empty($_POST['ID'])) {
     // Remove product from order history, we can use ON CASCADE instead
     $sql = "DELETE FROM `c_produit_has_commandeachat` WHERE Produit_ID = $id";
     if (mysqli_query($con, $sql)) {
-        $sql = "DELETE FROM `c_produit_has_commandevente` WHERE ID = $id";
+        $sql = "DELETE FROM `c_produit_has_commandevente` WHERE Produit_ID = $id";
         if (mysqli_query($con, $sql)) {
             $sql = "DELETE FROM c_produit WHERE ID = $id";
             if (mysqli_query($con, $sql)) {
